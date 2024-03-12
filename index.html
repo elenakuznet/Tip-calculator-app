@@ -30,63 +30,78 @@
                 <fieldset class="calc__fieldset">
                   <label class="calc__label">
                     <span class="calc__text">Bill</span>
-                    <input class="calc__input" type="number" />
+                    <input
+                      class="calc__input"
+                      id="bill"
+                      type="number"
+                      name="bill"
+                    />
                   </label>
                 </fieldset>
                 <fieldset class="calc__fieldset">
                   <legend class="calc__text">Select Tip %</legend>
                   <fieldset class="calc__tips">
-                    <label class="tip" for="">
+                    <label class="" for="5">
                       <input
                         class="tip__input visually-hidden"
                         type="radio"
                         name="tip"
                         value="5"
+                        id="5"
                       />
-                      <span class="tip__text">5%</span>
+                      <span class="tip__btn">5%</span>
                     </label>
-                    <label class="tip" for="">
+                    <label class="" for="10">
                       <input
                         class="tip__input visually-hidden"
                         type="radio"
                         name="tip"
                         value="10"
+                        id="10"
                       />
-                      <span class="tip__text">10%</span>
+                      <span class="tip__btn">10%</span>
                     </label>
-                    <label class="tip" for="">
+                    <label class="" for="15">
                       <input
                         class="tip__input visually-hidden"
                         type="radio"
                         name="tip"
                         value="15"
+                        id="15"
                       />
-                      <span class="tip__text">15%</span>
+                      <span class="tip__btn">15%</span>
                     </label>
-                    <label class="tip" for="">
+                    <label class="" for="25">
                       <input
                         class="tip__input visually-hidden"
                         type="radio"
                         name="tip"
                         value="25"
+                        id="25"
                       />
-                      <span class="tip__text">25%</span>
+                      <span class="tip__btn">25%</span>
                     </label>
-                    <label class="tip" for="">
+                    <label class="" for="50">
                       <input
                         class="tip__input visually-hidden"
                         type="radio"
                         name="tip"
                         value="50"
+                        id="50"
                       />
-                      <span class="tip__text">50%</span>
+                      <span class="tip__btn">50%</span>
                     </label>
                   </fieldset>
                 </fieldset>
                 <fieldset class="calc__fieldset">
                   <label class="calc__label">
                     <span class="calc__text">Number of People</span>
-                    <input class="calc__input" type="number" />
+                    <input
+                      class="calc__input"
+                      id="people"
+                      name="people"
+                      type="number"
+                    />
                   </label>
                 </fieldset>
               </form>
@@ -98,18 +113,18 @@
                     <span class="calc__result-text">Tip Amount</span
                     ><span class="calc__result-subtext">/ person</span>
                   </div>
-                  <span class="calc__number">$ 0.00</span>
+                  <span class="calc__number" id="tipsPerPerson">$ 0.00</span>
                 </div>
                 <div class="calc__result">
                   <div class="calc__result-wrapper">
                     <span class="calc__result-text">Total</span
                     ><span class="calc__result-subtext">/ person</span>
                   </div>
-                  <span class="calc__number">$ 0.00</span>
+                  <span class="calc__number" id="total">$ 0.00</span>
                 </div>
               </div>
 
-              <button class="calc__button">RESET</button>
+              <button class="calc__button" id="reset" disabled>RESET</button>
             </div>
           </div>
         </div>
@@ -124,5 +139,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="index.js"></script>
   </body>
 </html>
