@@ -30,12 +30,20 @@
                 <fieldset class="calc__fieldset">
                   <label class="calc__label">
                     <span class="calc__text">Bill</span>
-                    <input
-                      class="calc__input"
-                      id="bill"
-                      type="number"
-                      name="bill"
-                    />
+                    <div class="calc__input-wrapper">
+                      <img
+                        class="calc__icon"
+                        src="images/icon-dollar.svg"
+                        alt=""
+                      />
+                      <input
+                        class="calc__input"
+                        id="bill"
+                        type="number"
+                        name="bill"
+                        placeholder="0"
+                      />
+                    </div>
                   </label>
                 </fieldset>
                 <fieldset class="calc__fieldset">
@@ -91,17 +99,35 @@
                       />
                       <span class="tip__btn">50%</span>
                     </label>
+                    <label class="" for="custom">
+                      <input
+                        class="calc__input custom-input"
+                        type="number"
+                        name="tip"
+                        id="custom"
+                        placeholder="Custom"
+                      />
+                      <!-- <span class="tip__btn">50%</span> -->
+                    </label>
                   </fieldset>
                 </fieldset>
                 <fieldset class="calc__fieldset">
                   <label class="calc__label">
                     <span class="calc__text">Number of People</span>
-                    <input
-                      class="calc__input"
-                      id="people"
-                      name="people"
-                      type="number"
-                    />
+                    <div class="calc__input-wrapper">
+                      <img
+                        class="calc__icon"
+                        src="images/icon-person.svg"
+                        alt=""
+                      />
+                      <input
+                        class="calc__input"
+                        id="people"
+                        name="people"
+                        type="number"
+                        placeholder="0"
+                      />
+                    </div>
                   </label>
                 </fieldset>
               </form>
