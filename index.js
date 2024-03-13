@@ -1,11 +1,11 @@
 const form = document.querySelector(".calc__form");
-// const bill = document.getElementById("bill");
-// const peopleNumber = document.getElementById("people");
 const tipPercents = document.querySelectorAll(".tip__input");
 const customPercent = document.getElementById("custom");
 const tipResult = document.getElementById("tipsPerPerson");
 const totalResult = document.getElementById("total");
 const resetBtn = document.getElementById("reset");
+const peopleInput = document.getElementById("people");
+const errorMessage = document.getElementById("error");
 
 let percent;
 
@@ -17,7 +17,6 @@ form.addEventListener("input", () => {
 
     const tipPercentPerPerson = tipPercent / numberOfPeople;
     // Number(tipPercentPerPerson).toFixed(2);
-    console.log(tipPercentPerPerson);
     tipResult.innerText = `$ ${tipPercentPerPerson.toFixed(2)}`;
 
     const total = (bill + tipPercent) / numberOfPeople;
@@ -51,4 +50,17 @@ resetBtn.addEventListener("click", () => {
   form.reset();
   totalResult.innerText = "$ 0.00";
   tipResult.innerText = "$ 0.00";
+  resetBtn.setAttribute("disabled", true);
+});
+
+// Number Input Error
+
+peopleInput.addEventListener("input", () => {
+  if (parseInt(peopleInput.value) < 1) {
+    peopleInput.style.outline = "1px solid red";
+    errorMessage.innerHTML = "Cant be zero";
+  } else {
+    peopleInput.style.outline = "1px solid transparent";
+    errorMessage.innerHTML = "";
+  }
 });
