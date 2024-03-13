@@ -62,5 +62,6 @@ peopleInput.addEventListener("input", () => {
   } else {
     peopleInput.style.outline = "1px solid transparent";
     errorMessage.innerHTML = "";
+    peopleInput.classList.add("error");
   }
 });
